@@ -17,6 +17,7 @@ Used to execute code in a Docker container.
 
 • Allows developers to package applications with all parts needed such as libraries and other dependencies.
 
+
 **3. Docker file**
 
 Docker image üretir. image üretmek amacıyla kullanılan “***Config***” dosyasına verilen isimdir.
@@ -65,11 +66,8 @@ Docker Engine is a client-server based application.
     
     • **Docker Compose Çalıştırmak**
     
-    docker-compose up -d
-    
-    ![Screen Shot 2023-11-03 at 1.26.43 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/37d02691-5fac-4ee4-8271-91fdd905b13c/ac32401c-247d-4293-a033-c063b17c2eff/Screen_Shot_2023-11-03_at_1.26.43_PM.png)
-    
-    ![Screen Shot 2023-11-03 at 1.37.54 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/37d02691-5fac-4ee4-8271-91fdd905b13c/3df4325a-7cf7-457f-be6d-4024ecb71427/Screen_Shot_2023-11-03_at_1.37.54_PM.png)
+   <img width="696" alt="Ekran Resmi 2023-11-03 21 38 14" src="https://github.com/sensoyyasin/inception/assets/73845925/6f7971db-9fcb-46e6-a823-cf0f0818c556">
+  
     
     • **Docker-Compose.yml Komutları**
     
