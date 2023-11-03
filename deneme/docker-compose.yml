@@ -1,0 +1,53 @@
+
+#docker-compose up --build //watch modu
+
+version: '3.8'
+
+networks:
+    ft_network:
+      name: ft_network
+
+volumes:
+  ssl:
+
+services:
+  ssl:
+  
+  wp:
+    build: ./srcs/requriments/wordpress
+    networks:
+      - ft_network
+    ports:
+      - 
+    volumes:
+      - /home/abc/abc.sh:/app/abc.sh
+      - abc:/app
+
+  nginx:
+    build: ./srcs/requriments/nginx
+    networks:
+      - ft_network
+    ports:
+      - 443:443
+
+  db:
+    build: ./srcs/requriments/nginx
+    ports:
+      -
+
+
+
+
+
+
+
+
+secrets:
+  db:
+    image: mysql:8.0
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+  environment:
+    MYSQL_ROOT_PASSWORD: root_password
+  ports:
+    - "4242:4242"
