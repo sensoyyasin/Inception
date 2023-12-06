@@ -1,0 +1,77 @@
+version: '3.5'
+
+# Ag tanimlamalari
+networks:
+   app-network:
+      name: app-network
+      driver: bridge
+
+# Services
+services:
+
+   # MariaDB Service
+   mariadb:
+      container_name: mariadb
+      build: ./requirements/mariadb
+      #image: mariadb:10.9
+      env_file:
+         - .env
+      volumes:
+         -'mariadb:/var/lib/mysql'
+      networks:
+         - app-network
+      depends_on:
+         - wordpress
+      restart: always
+
+   # wordpress Service
+   wordpress:
+      container_name: wordpress
+      build: ./requirements/wordpress
+      env_file:
+         - .env
+      depends_on:
+         - mariadb
+      volumes:
+         - wordpress:/var/www/html
+      networks:
+         - app-network
+      restart: always
+
+   # Nginx Service
+   nginx:
+      container_name: nginx
+      build: ./requirements/nginx
+      #image: nginx
+      ports:
+      - "443:443"
+      depends_on:
+         - wordpress
+      volumes:
+         - wordpress:/var/www/html
+      networks:
+         - app-network
+      restart: always
+
+# Volumes
+volumes:
+   wordpress:
+      driver: local
+      name: wordpress
+      driver_opts:
+         type: bridge
+         device: /home/data/wordpress
+         o: bind
+   mariadb:
+      driver: local
+      name: mariadb
+      driver_opts:
+         type: bridge
+         device: /home/data/mysql
+         o: bind
+   # nginx:
+   #    driver: local
+   #    name: mariadb
+   #    driver_opts:
+   #       type: bridge
+   #       o: bind
