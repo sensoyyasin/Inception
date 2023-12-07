@@ -77,17 +77,27 @@ volumes:
 - Sanal makine sistemlerinde, her bir sanal makine kendi işletim sistemini kullanılır ve kendi kütüphaneleri vardır. Aslında az çok hepimiz VMware kullanmışızdır. Örneğin Windows makinemizde MacOs işletim sistemini koşturmak istersek VMware ile bunu sağlayabiliyoruz. Ama farkettiyseniz bu sizin için maliyetli olur çünkü kaynak tüketimi fazladır, çünkü tamamen farklı bir işletim sistemini ayağa kaldırırsınız ve de açılış hızı yavaştır; bir süre beklemek zorunda kalırsınız. Fakat Docker teknolojisi, contenierları çalıştımak için üzerinde host edildiği tek bir işletim sistemine bağlıdır, kaynak tüketimi azdır. Ayrıca conteinerlar saniyeler içinde kullanıma hazır hale geliyor
 
 # VM (Virtual Machine)
+
 OS : Tam işletim sistemi
+
 İzolasyon : Yüksek
+
 Çalışır hale gelmesi : Dakikalar
+
 Versiyonlama : Yok
+
 Kolay paylaşılabilirlik : Düşük
 
 # Docker
+
 OS : Küçültülmüş işletim sistemi imajı
+
 İzolasyon : Daha düşük
+
 Çalışır hale gelmesi : Saniyeler
+
 Versiyonlama : Yüksek
+
 Kolay paylaşılabilirlik : Yüksek
 
 # Memory usage difference
