@@ -1,10 +1,13 @@
 # Inception
 This project aims to broaden my knowledge of system administration by using Docker. 
 
-https://www.google.com/url?sa=i&url=https%3A%2F%2Fgeektechstuff.com%2F2019%2F07%2F21%2Fsharing-a-docker-image%2F&psig=AOvVaw24MRpGeeBNAQoTRiKF1vUG&ust=1702057525798000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCOiJv8Tw_YIDFQAAAAAdAAAAABAD![image](https://github.com/sensoyyasin/inception/assets/73845925/0c94044d-7674-4bdb-84a0-cff72e04ae48)
+![docker](https://github.com/sensoyyasin/inception/assets/73845925/1a6f24e6-a0b2-43a7-8066-d66d43de0b65)
 
+![vm ws docker](https://github.com/sensoyyasin/inception/assets/73845925/a098fe93-0488-4e25-838b-99a6ecd93a13)
 
 Important Terminologies in Docker**
+
+![dockerimage](https://github.com/sensoyyasin/inception/assets/73845925/333375b4-bd86-4e6f-9d6b-30095934af27)
 
 **Docker en basit ifadesiyle uygulamaların en hızlı şekilde bir araya getirilmesine**, test edilmesine ve dağıtma işlemlerinin gerçekleştirilmesine imkan sunan yazılım platformudur.
 
