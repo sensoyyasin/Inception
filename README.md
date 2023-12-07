@@ -1,7 +1,10 @@
-# inception
-introduction to inception
+# Inception
+This project aims to broaden my knowledge of system administration by using Docker. 
 
-I**mportant Terminologies in Docker**
+https://www.google.com/url?sa=i&url=https%3A%2F%2Fgeektechstuff.com%2F2019%2F07%2F21%2Fsharing-a-docker-image%2F&psig=AOvVaw24MRpGeeBNAQoTRiKF1vUG&ust=1702057525798000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCOiJv8Tw_YIDFQAAAAAdAAAAABAD![image](https://github.com/sensoyyasin/inception/assets/73845925/0c94044d-7674-4bdb-84a0-cff72e04ae48)
+
+
+Important Terminologies in Docker**
 
 **Docker en basit ifadesiyle uygulamaların en hızlı şekilde bir araya getirilmesine**, test edilmesine ve dağıtma işlemlerinin gerçekleştirilmesine imkan sunan yazılım platformudur.
 
