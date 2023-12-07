@@ -1,8 +1,6 @@
 # Inception
 This project aims to broaden my knowledge of system administration by using Docker. 
 
-![docker](https://github.com/sensoyyasin/inception/assets/73845925/1a6f24e6-a0b2-43a7-8066-d66d43de0b65)
-
 ![vm ws docker](https://github.com/sensoyyasin/inception/assets/73845925/a098fe93-0488-4e25-838b-99a6ecd93a13)
 
 Important Terminologies in Docker**
