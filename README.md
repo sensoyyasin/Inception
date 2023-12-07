@@ -40,21 +40,7 @@ Compose kullanmak temel olarak üç adımlı bir işlemdir:
 
 docker-compose.yml aşağıdaki gibidir:
 
-version: '2.0'
-services:
-  web:
-    build: .
-    ports:
-    - "5000:5000"
-    volumes:
-    - .:/code
-    - logvolume01:/var/log
-    links:
-    - redis
-  redis:
-    image: redis
-volumes:
-  logvolume01: {}
+<img width="213" alt="Ekran Resmi 2023-12-07 22 29 51" src="https://github.com/sensoyyasin/Inception/assets/73845925/7993ac24-3cdd-4557-8c45-d4d283915440">
 
 ## Docker avantajları nelerdir?
 
