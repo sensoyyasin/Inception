@@ -1,0 +1,40 @@
+docker container ls -> çalışmakta olan container listesi.
+docker container ls -a -> var olan tüm container listesi.
+
+docker container start <container-name> -> container başlatma
+
+docker container stop <container-name> -> container durdurma
+
+docker run -> yeni container yaratır ve bu container üzerinde bir komut çalıştırır.
+
+docker run -it -> interactive mode
+
+**docker içinde kabuk da çalıştırabiliriz
+docker container exec -it <container_name> /bin/bash
+
+* Docker Compose Nasıl Çalıştırılır?
+docker compose up -> docker-compose.yml dosyasındaki komutları kullanarak
+container, network ve volumeları oluşturacak.
+
+* Dosya adınız docker-compose.yml değilse?
+-f parametresiyle dosya adını belirle. Örn: docker compose -f file_name.yml up
+
+* Docker compose durdurma
+docker compose down
+
+* [Docker-compose - no space left on device]
+docker system prune -a
+- all stopped containers
+- all networks not used by at least one
+- all images without at least one container associated to them
+- all build cache
+
+* Check your disk size for docker
+docker system df
+
+* $docker build .
+* $docker build . -t newimage
+
+* $docker images
+
+* $docker run -it -p 8000:80 newimage

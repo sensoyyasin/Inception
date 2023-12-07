@@ -1,19 +1,18 @@
-version: '3.5'
+version: '3.8'
 
-# Ag tanimlamalari
+# Container'lar arasindaki ag baglantilarini tanimlar.
 networks:
    app-network:
       name: app-network
       driver: bridge
 
-# Services
+# Services -> containerlari tanimlar
 services:
 
    # MariaDB Service
    mariadb:
       container_name: mariadb
       build: ./requirements/mariadb
-      #image: mariadb:10.9
       env_file:
          - .env
       volumes:
@@ -44,7 +43,7 @@ services:
       build: ./requirements/nginx
       #image: nginx
       ports:
-      - "443:443"
+      - "443:443" #bilgisayarın 443 portu -> container 443 portuna yönlendir. 
       depends_on:
          - wordpress
       volumes:
@@ -53,7 +52,7 @@ services:
          - app-network
       restart: always
 
-# Volumes
+# Volumes -> containerlar icin veri kaynaklari
 volumes:
    wordpress:
       driver: local
@@ -69,9 +68,3 @@ volumes:
          type: bridge
          device: /home/data/mysql
          o: bind
-   # nginx:
-   #    driver: local
-   #    name: mariadb
-   #    driver_opts:
-   #       type: bridge
-   #       o: bind
