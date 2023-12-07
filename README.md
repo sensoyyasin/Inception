@@ -23,6 +23,10 @@ This project aims to broaden my knowledge of system administration by using Dock
 
 ![Dockerfile](https://github.com/sensoyyasin/Inception/assets/73845925/47255089-cdcc-4d77-9e1f-f34f3b14ea4e)
 
+# Dockerfile Syntax
+
+<img width="777" alt="Ekran Resmi 2023-12-05 23 26 39" src="https://github.com/sensoyyasin/Inception/assets/73845925/445c510f-3ca8-46fa-b65c-c5dca5547dbd">
+
   
 ![dockerimage](https://github.com/sensoyyasin/Inception/assets/73845925/23630cb1-cf79-4567-9d0d-fb8b0d3a1176)
 
