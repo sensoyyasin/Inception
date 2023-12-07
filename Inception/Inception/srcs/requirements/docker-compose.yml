@@ -1,11 +1,4 @@
 version: '3.8'
-
-# Container'lar arasindaki ag baglantilarini tanimlar.
-networks:
-   app-network:
-      name: app-network
-      driver: bridge
-
 # Services -> containerlari tanimlar
 services:
 
@@ -15,8 +8,10 @@ services:
       build: ./requirements/mariadb
       env_file:
          - .env
+      ports:
+         - "3306"
       volumes:
-         -'mariadb:/var/lib/mysql'
+         - MariaDB:/var/lib/mysql
       networks:
          - app-network
       depends_on:
@@ -29,10 +24,12 @@ services:
       build: ./requirements/wordpress
       env_file:
          - .env
+      ports:
+         - "9000"
       depends_on:
          - mariadb
       volumes:
-         - wordpress:/var/www/html
+         - Wordpress:/var/www/html
       networks:
          - app-network
       restart: always
@@ -43,28 +40,31 @@ services:
       build: ./requirements/nginx
       #image: nginx
       ports:
-      - "443:443" #bilgisayarın 443 portu -> container 443 portuna yönlendir. 
+      - "443:443" #bilgisayarın 443 portu -> container 443 portuna yönlendir.
       depends_on:
          - wordpress
       volumes:
-         - wordpress:/var/www/html
+         - Wordpress:/var/www/html
       networks:
          - app-network
       restart: always
 
 # Volumes -> containerlar icin veri kaynaklari
 volumes:
-   wordpress:
+   Wordpress:
       driver: local
-      name: wordpress
       driver_opts:
-         type: bridge
-         device: /home/data/wordpress
+         type: 'none'
          o: bind
-   mariadb:
+         device: '/home/data/wordpress'
+   MariaDB:
       driver: local
-      name: mariadb
       driver_opts:
-         type: bridge
-         device: /home/data/mysql
+         type: 'none'
          o: bind
+         device: '/home/data/mysql'
+
+# Container'lar arasindaki ag baglantilarini tanimlar.
+networks:
+   app-network:
+      driver: bridge
