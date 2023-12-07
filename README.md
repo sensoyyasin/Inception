@@ -1,4 +1,4 @@
-# Docker
+# Docker 🐳
 This project aims to broaden my knowledge of system administration by using Docker. 
 
 ## Docker Nedir?
