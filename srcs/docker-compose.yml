@@ -1,0 +1,64 @@
+version: '3'
+# Services -> containerlari tanimlar
+services:
+
+   # MariaDB Service
+   mariadb:
+      container_name: mariadb
+      build: ./mariadb
+      networks:
+         - app-network
+      volumes:
+         - MDB:/var/lib/mysql
+      env_file:
+         - .env
+      restart: always
+
+   # Nginx Service
+   nginx:
+      container_name: nginx
+      build: ./nginx
+      ports:
+         - "443:443" #bilgisayarın 443 portu -> container 443 portuna yönlendir.
+      networks:
+         - app-network
+      env_file:
+         - .env
+      volumes:
+         - WordPress:/var/www
+      depends_on:
+         - wordpress
+      restart: always
+
+   wordpress:
+      container_name: wordpress
+      build: ./wordpress
+      networks:
+         - app-network
+      env_file:
+         - .env
+      volumes:
+         - WordPress:/var/www
+      depends_on:
+         - mariadb
+      restart: always
+
+
+# Container'lar arasindaki ag baglantilarini tanimlar.
+networks:
+   app-network:
+      driver: bridge
+
+volumes:
+   MDB:
+      driver: local
+      driver_opts:
+         type: none
+         device: /home/ysensoy/data/mysql
+         o:  bind
+   WordPress:
+      driver: local
+      driver_opts:
+         type: none
+         device: /home/ysensoy/data/wordpress
+         o: bind
