@@ -21,9 +21,6 @@ else
 	sed -i "s/password_here/$MYSQL_PASSWORD/g" wp-config-sample.php
     cp wp-config-sample.php wp-config.php
 
-    #sed -i "/<?php/a define( 'WP_SITEURL', 'https://example.com' );\ndefine( 'WP_HOME', 'https://example.com' );" wp-config-sample.php
-	sed -i "s/example.com/$WP_URL/g" wp-config-sample.php
-
     echo "wordpress creating users..."
 	wp core install --allow-root --url=${WP_URL} --title=${WP_DATABASE} --admin_user=${WP_ADMIN_LOGIN} --admin_password=${WP_ADMIN_PASSWORD} --admin_email=${WP_ADMIN_EMAIL};
 	wp user create --allow-root ${WP_USER_LOGIN} ${WP_USER_EMAIL} --user_pass=${WP_USER_PASSWORD};

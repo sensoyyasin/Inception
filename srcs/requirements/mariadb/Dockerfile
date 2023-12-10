@@ -4,9 +4,9 @@ RUN apt-get update && apt-get install -y ntp && service ntp start && apt-get ins
 
 EXPOSE 3306
 
-COPY ./50-server.cnf /etc/mysql/mariadb.conf.d/50-server.cnf
+COPY ./conf/50-server.cnf /etc/mysql/mariadb.conf.d/50-server.cnf
 
-COPY ./mariadb.sql /var/www/
+COPY ./tools/mariadb.sql /var/www/
 
 RUN chmod +x /var/www/mariadb.sql
 

@@ -5,7 +5,7 @@ services:
    # MariaDB Service
    mariadb:
       container_name: mariadb
-      build: ./mariadb
+      build: ./requirements/mariadb
       networks:
          - app-network
       volumes:
@@ -17,7 +17,7 @@ services:
    # Nginx Service
    nginx:
       container_name: nginx
-      build: ./nginx
+      build: ./requirements/nginx
       ports:
          - "443:443" #bilgisayarın 443 portu -> container 443 portuna yönlendir.
       networks:
@@ -25,20 +25,20 @@ services:
       env_file:
          - .env
       volumes:
-         - WordPress:/var/www
+         - WordPress:/var/www/html
       depends_on:
          - wordpress
       restart: always
 
    wordpress:
       container_name: wordpress
-      build: ./wordpress
+      build: ./requirements/wordpress
       networks:
          - app-network
       env_file:
          - .env
       volumes:
-         - WordPress:/var/www
+         - WordPress:/var/www/html
       depends_on:
          - mariadb
       restart: always
