@@ -1,7 +1,8 @@
 # Docker 🐳
 This project aims to broaden my knowledge of system administration by using Docker.
 
-<img width="500" alt="Ekran Resmi 2023-12-15 19 24 44" src="https://github.com/sensoyyasin/Inception/assets/73845925/16f140c7-ae6e-4269-916b-7d9e5ad74301">
+<img width="600" alt="Ekran Resmi 2023-12-15 19 24 44" src="https://github.com/sensoyyasin/Inception/assets/73845925/76d7087f-04ad-43c2-adcf-9e89155c9f9d">
+
 
 ## Docker Nedir?
 
