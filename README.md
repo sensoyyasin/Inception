@@ -45,8 +45,7 @@ Compose kullanmak temel olarak üç adımlı bir işlemdir:
 docker-compose.yml aşağıdaki gibidir:
 
 <img width="213" alt="Ekran Resmi 2023-12-07 22 29 51" src="https://github.com/sensoyyasin/Inception/assets/73845925/7993ac24-3cdd-4557-8c45-d4d283915440">
-
-![Ekran Resmi 2023-12-15 19 17 56](https://github.com/sensoyyasin/Inception/assets/73845925/8973321d-d661-41c1-ab68-69c5c8c4fe98)
+<img width="500" alt="Ekran Resmi 2023-12-15 19 22 31" src="https://github.com/sensoyyasin/Inception/assets/73845925/8390f41b-9970-429d-b0dd-087290add227">
 
 
 ## Docker avantajları nelerdir?
