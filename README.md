@@ -46,6 +46,8 @@ docker-compose.yml aşağıdaki gibidir:
 
 <img width="213" alt="Ekran Resmi 2023-12-07 22 29 51" src="https://github.com/sensoyyasin/Inception/assets/73845925/7993ac24-3cdd-4557-8c45-d4d283915440">
 
+![Ekran Resmi 2023-12-15 19 17 56](https://github.com/sensoyyasin/Inception/assets/73845925/ebf98ed9-9e77-4966-a68a-d6490d83d56c)
+
 ## Docker avantajları nelerdir?
 
 - Docker saniyeler içerisinde başlar, çünkü içerisinde barındırdığı her bir container sadece birer processtir. Böylece karşımıza lightweight bir yapı karşımıza çıkar. Bu da bizi sanal makinelerin hantallığından kurtarmış oluyor.
